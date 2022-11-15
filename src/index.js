@@ -45,8 +45,10 @@ apiSearchForm.addEventListener('submit', (e) => {
                 titleHover.textContent = metadata.data.title
                 img.src = `https://www.artic.edu/iiif/2/${artMeta.data.image_id}/full/843,/0/default.jpg`
                 img.alt= art.thumbnail.alt_text
-                img.addEventListener('click', () => {
-
+                overlay.addEventListener('click', () => {
+                   
+                    console.log('Hello')
+                    
                 })
                 const h2 = document.createElement("h2");
                 h2.textContent = art.title

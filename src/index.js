@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded',() => {
 const resultsDiv = document.querySelector('#results');
 const apiSearchForm = document.querySelector('#api-search');
 
+
 apiSearchForm.addEventListener('submit', (e) => {
         e.preventDefault()
         const query = encodeURI(e.target.search.value)
@@ -23,11 +24,14 @@ apiSearchForm.addEventListener('submit', (e) => {
             .then(metadata => {
                 console.log(metadata)
                 const artMeta = metadata
-                
-            
+                const queryExample= document.querySelector(".artistName")
+                // queryExample.innerHTML = 
+
         
                 const img = document.createElement("img");
+                img.setAttribute('class', "pictures")
                 img.src = `https://www.artic.edu/iiif/2/${artMeta.data.image_id}/full/843,/0/default.jpg`
+                img.alt= art.thumbnail.alt_text
                 img.addEventListener('click', () => {
 
                 })
@@ -39,15 +43,16 @@ apiSearchForm.addEventListener('submit', (e) => {
             
             
                 const p = document.createElement("p");
-                p.textContent = art.thumbnail.alt_text
+                // p.textContent = art.thumbnail.alt_text
             
-                div.append(img,h2,h3,p);
+                div.append(img);
                 resultsDiv.append(div);
             })
         })
         
     
         })
+
         
 })
 })

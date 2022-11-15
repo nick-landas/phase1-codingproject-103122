@@ -23,18 +23,15 @@ p {
   margin:10px;
 }
 
-.img {
+.pictures {
   width: 200px;
   height: 200px;
   float:left;
-  margin:5px;
+  margin:30px;
   border-style: solid;
   border-color: #DEB887;
   border-width: 5px;
 }
-
-
-
 
 
 .search-results {

@@ -1,15 +1,23 @@
 
-  .title {
+.title {
     text-align: center;
 }
 
 #api-search{
   font-size: 20px;
-
 }
+
 body {
   background-color: 		#fdf5e6;
+  opacity: 1;
+    transition-duration: 1s;
+    transition-property: opacity
 }
+
+body.fade {
+  opacity: 0;
+}
+
 
 h1 {
   background-color: 	#eee8aa;
@@ -23,7 +31,7 @@ p {
   margin:10px;
 }
 
-.pictures {
+/* .pictures {
   width: 200px;
   height: 200px;
   float:left;
@@ -31,8 +39,8 @@ p {
   border-style: solid;
   border-color: #DEB887;
   border-width: 5px;
-}
-
+  
+} */
 
 .search-results {
 text-align: center;
@@ -51,9 +59,45 @@ margin-top: 100px;
 form {
   background-color: 	#ffefd5; }
   
+.container{
+  position: relative;
+  width: 50%;
+}
 
+.pictures {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
 
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
 
 

@@ -22,19 +22,18 @@ p {
   float:left;
   margin:10px;
 }
-.images {
+
+.img {
   width: 200px;
   height: 200px;
   float:left;
   margin:5px;
   border-style: solid;
-  border-color: #DEB88;
-  border-width:5px;
+  border-color: #DEB887;
+  border-width: 5px;
 }
 
-.images2 {
- <!-- new img -->
-}
+
 
 
 
@@ -50,13 +49,15 @@ margin-top: 100px;
   text-align: center;
   margin-right: 140px;
 }
+
+
 form {
-  background-color: 	#ffefd5;
+  background-color: 	#ffefd5; }
   
 
 
 
-//how to comment out in html?
+
 
 
 

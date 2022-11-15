@@ -39,7 +39,7 @@ apiSearchForm.addEventListener('submit', (e) => {
             
             
                 const p = document.createElement("p");
-                // p.textContent = art.thumbnail.alt_text
+                p.textContent = art.thumbnail.alt_text
             
                 div.append(img,h2,h3,p);
                 resultsDiv.append(div);

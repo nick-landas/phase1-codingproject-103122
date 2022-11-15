@@ -1,0 +1,62 @@
+
+  .title {
+    text-align: center;
+}
+
+#api-search{
+  font-size: 20px;
+
+}
+body {
+  background-color: 		#fdf5e6;
+}
+
+h1 {
+  background-color: 	#eee8aa;
+}
+
+p {
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 122, 89, .5);
+  float:left;
+  margin:10px;
+}
+.images {
+  width: 200px;
+  height: 200px;
+  float:left;
+  margin:5px;
+  border-style: solid;
+  border-color: #DEB88;
+  border-width:5px;
+}
+
+.images2 {
+ <!-- new img -->
+}
+
+
+
+.search-results {
+text-align: center;
+margin-left: 180px;
+margin-top: 100px;
+}
+
+.artistName {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 140px;
+}
+form {
+  background-color: 	#ffefd5;
+  
+
+
+
+//how to comment out in html?
+
+
+

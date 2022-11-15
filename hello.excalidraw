@@ -389,7 +389,7 @@
     {
       "id": "z_nJ5vNRyFDbAVepUp99L",
       "type": "rectangle",
-      "x": 677.20703125,
+      "x": 676.9567194774747,
       "y": 476.90234375,
       "width": 190.0703125,
       "height": 22.1640625,
@@ -404,11 +404,11 @@
       "groupIds": [],
       "strokeSharpness": "sharp",
       "seed": 1055178221,
-      "version": 108,
-      "versionNonce": 564222093,
+      "version": 109,
+      "versionNonce": 1059116461,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1668453973228,
+      "updated": 1668455577845,
       "link": null,
       "locked": false
     },

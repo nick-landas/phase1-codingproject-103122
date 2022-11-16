@@ -46,11 +46,22 @@ p {
 #results {
 display: flex;
 justify-content: center;
+/* gap: 30px; */
+flex-wrap: wrap;
 text-align: center;
-margin-left: 180px;
+
 margin-top: 100px;
 
 }
+#results .container{
+  width: 20%;
+  margin-bottom: 30px;
+}
+
+
+
+
+
 
 .artistName {
   font-weight: bold;

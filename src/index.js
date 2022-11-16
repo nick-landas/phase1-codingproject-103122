@@ -2,7 +2,7 @@ document.body.className = 'fade';
 document.addEventListener('DOMContentLoaded',() => {
     window.setTimeout(function() {
         document.body.className = '';
-    }, 750);
+    }, 0);
     
     const resultsDiv = document.querySelector('#results');
     const apiSearchForm = document.querySelector('#api-search');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded',() => {
                         overlay.addEventListener('click', (e) => {
                             
                             console.log('Hello')
-                            const hiddenInfo = document.getElementById('facts')
+                            const hiddenInfo = document.getElementById('facts') 
                             hiddenInfo.innerHTML =''
                             const metaBox = document.createElement('ul')
 
@@ -61,10 +61,10 @@ document.addEventListener('DOMContentLoaded',() => {
 
                             metaBox.append(artist,style,classification)
                             hiddenInfo.append(metaBox)
-                            setTimeout(() => {
-                                //console.log('Hello World!');
-                                hiddenInfo.innerHTML =''
-                              }, 1500);
+                            // setTimeout(() => {
+                            //     //console.log('Hello World!');
+                            //     hiddenInfo.innerHTML =''
+                            //   }, 1500);
                         })
                             overlay.append(titleHover);
                             div.append(img,overlay);

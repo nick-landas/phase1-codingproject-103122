@@ -16,6 +16,7 @@ body {
 
 body.fade {
   opacity: 0;
+  background-color: #6b7d25
 }
 
 

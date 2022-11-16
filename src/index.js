@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded',() => {
         e.target.reset()
         resultsDiv.innerHTML =''
         //console.log(query)
-        fetch(`https://api.artic.edu/api/v1/artworks/search?q=${query}&query[term][is_public_domain]=true&limit=10`)
+        fetch(`https://api.artic.edu/api/v1/artworks/search?q=${query}&query[term][is_public_domain]=true&limit=8`)
         .then(res => res.json())    
         .then(artWorks => {
            // console.log(artWorks)
@@ -61,10 +61,10 @@ document.addEventListener('DOMContentLoaded',() => {
 
                             metaBox.append(artist,style,classification)
                             hiddenInfo.append(metaBox)
-                            // setTimeout(() => {
-                            //     //console.log('Hello World!');
-                            //     hiddenInfo.innerHTML =''
-                            //   }, 1500);
+                            setTimeout(() => {
+                                //console.log('Hello World!');
+                                hiddenInfo.innerHTML =''
+                              }, 3000);
                         })
                             overlay.append(titleHover);
                             div.append(img,overlay);

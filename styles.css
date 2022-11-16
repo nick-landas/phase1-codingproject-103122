@@ -4,7 +4,7 @@
 }
 
 #api-search{
-  font-size: 20px;
+  font-size: 25px;
 }
 
 body {
@@ -54,7 +54,7 @@ margin-top: 100px;
 
 }
 #results .container{
-  width: 20%;
+  width: 25%;
   margin-bottom: 30px;
 }
 
@@ -67,7 +67,8 @@ margin-top: 100px;
   font-weight: bold;
   font-size: 20px;
   text-align: center;
-  margin-right: 140px;
+  margin-right: 80 px;
+  margin-top: 20px;
 }
 
 
@@ -81,8 +82,8 @@ form {
 
 .pictures {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-style: solid;
   border-color: #DEB887;
   border-width: 5px;
@@ -96,10 +97,10 @@ form {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: 45px;
   right: 0;
   height: 100%;
-  width: 100%;
+  width: 75%;
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
@@ -112,7 +113,7 @@ form {
 
 .text {
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -129,5 +130,7 @@ div {
   justify-content: center;
 }
 
-
+#facts {
+font-size: ;
+}
 

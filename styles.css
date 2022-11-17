@@ -20,7 +20,7 @@ body.fade {
 }
 
 
-h1 {
+h2 {
   background-color: 	#eee8aa;
 }
 
@@ -82,8 +82,8 @@ form {
 
 .pictures {
   display: block;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 180px;
   border-style: solid;
   border-color: #DEB887;
   border-width: 5px;
@@ -96,11 +96,11 @@ form {
 .overlay {
   position: absolute;
   top: 0;
-  bottom: 0;
-  left: 45px;
+  bottom: 20;
+  left: 17px;
   right: 0;
   height: 100%;
-  width: 75%;
+  width: 90%;
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
@@ -131,6 +131,8 @@ div {
 }
 
 #facts {
-font-size: ;
+font-size: large;
+
+
 }
 

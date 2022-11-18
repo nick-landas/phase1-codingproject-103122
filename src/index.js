@@ -1,8 +1,8 @@
-document.body.className = "fade";
+// document.body.className = "fade";
 document.addEventListener("DOMContentLoaded", () => {
-  window.setTimeout(function () {
-    document.body.className = "";
-  }, 0);
+//   window.setTimeout(function () {
+//     document.body.className = "";
+//   }, 0);
 
   const resultsDiv = document.querySelector("#results");
   const apiSearchForm = document.querySelector("#api-search");
@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
     resultsDiv.innerHTML = "";
     //console.log(query)
     fetch(
-      `https://api.artic.edu/api/v1/artworks/search?q=${query}&query[term][is_public_domain]=true&limit=8`
+      `https://api.artic.edu/api/v1/artworks/search?q=${query}&page=1&limit=12`
     )
       .then((res) => res.json())
       .then((artWorks) => {
         // console.log(artWorks)
         Object.keys(artWorks).forEach((key) => {
-          //console.log(key);
-          //console.log(artWorks[key]);
+        //console.log(key);
+        //console.log(artWorks[key]);
         });
         artWorks.data.forEach((art) => {
           const div = document.createElement("div");
@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const hiddenInfo = document.getElementById("facts");
                 hiddenInfo.innerHTML = "";
                 const metaBox = document.createElement("ul");
+                metaBox.className = "no-bullets"
 
                 const artist = document.createElement("li");
                 artist.innerText = artMeta.data.artist_title;
@@ -72,6 +73,19 @@ document.addEventListener("DOMContentLoaded", () => {
               overlay.append(titleHover);
               div.append(img, overlay);
               resultsDiv.append(div);
+
+              overlay.addEventListener("mouseenter", enlargeImg)
+              function enlargeImg() {
+                img.style.transform = "scale(2.0)";
+                img.style.transition = "transform 0.25s ease";
+              }
+              overlay.addEventListener("mouseleave", resetImg)
+              function resetImg() {
+                img.style.transform = "scale(1)";
+                img.style.transition = "transform 0.25s ease";
+              }
+
+            
             });
         });
       });

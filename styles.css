@@ -7,7 +7,8 @@
   font-size: 25px;
 }
 
-body {
+
+/* body {
   background-color: 		#fdf5e6;
   opacity: 1;
     transition-duration: 1s;
@@ -17,8 +18,7 @@ body {
 body.fade {
   opacity: 0;
   background-color: #6b7d25
-}
-
+} */
 
 h2 {
   background-color: 	#eee8aa;
@@ -44,24 +44,17 @@ p {
 } */
 
 #results {
-display: flex;
-justify-content: center;
-/* gap: 30px; */
-flex-wrap: wrap;
-text-align: center;
-
-margin-top: 100px;
-
+  display: flex;
+  justify-content: center;
+  /* gap: 30px; */
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 25px;
 }
 #results .container{
   width: 25%;
   margin-bottom: 30px;
 }
-
-
-
-
-
 
 .artistName {
   font-weight: bold;
@@ -70,7 +63,6 @@ margin-top: 100px;
   margin-right: 80 px;
   margin-top: 20px;
 }
-
 
 form {
   background-color: 	#ffefd5; }
@@ -82,33 +74,28 @@ form {
 
 .pictures {
   display: block;
-  width: 300px;
-  height: 180px;
+  width: 200px;
+  height: 120px;
   border-style: solid;
   border-color: #DEB887;
   border-width: 5px;
   float:left;
   margin:0 auto;
-  
-  
 }
 
 .overlay {
+  cursor: pointer;
   position: absolute;
-  top: 0;
-  bottom: 20;
-  left: 17px;
-  right: 0;
-  height: 100%;
-  width: 90%;
+  width: 200px;
+  height: 120px;
   opacity: 0;
-  transition: .5s ease;
+  transition: 4s ease;
   background-color: #008CBA;
 
 }
 
 .container:hover .overlay {
-  opacity: 1;
+  opacity: .8;
 }
 
 .text {
@@ -131,8 +118,15 @@ div {
 }
 
 #facts {
-font-size: large;
-
-
+  font-size: large;
+  text-align: center;
+  display: block;
+  float:center;
+  margin:0 auto;
 }
 
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0; 
+  margin: 0; 
+}

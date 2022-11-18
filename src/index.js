@@ -1,8 +1,4 @@
-// document.body.className = "fade";
 document.addEventListener("DOMContentLoaded", () => {
-//   window.setTimeout(function () {
-//     document.body.className = "";
-//   }, 0);
 
   const resultsDiv = document.querySelector("#results");
   const apiSearchForm = document.querySelector("#api-search");
@@ -15,9 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.target.reset();
     resultsDiv.innerHTML = "";
     //console.log(query)
-    fetch(
-      `https://api.artic.edu/api/v1/artworks/search?q=${query}&page=1&limit=12`
-    )
+    fetch(`https://api.artic.edu/api/v1/artworks/search?q=${query}&page=1&limit=12`)
       .then((res) => res.json())
       .then((artWorks) => {
         // console.log(artWorks)
@@ -45,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
               img.src = `https://www.artic.edu/iiif/2/${artMeta.data.image_id}/full/843,/0/default.jpg`;
               img.alt = art.thumbnail.alt_text;
 
-              overlay.addEventListener("click", (e) => {
-                console.log("Hello");
+              overlay.addEventListener("click", () => {
+                //console.log("Hello");
                 const hiddenInfo = document.getElementById("facts");
                 hiddenInfo.innerHTML = "";
                 const metaBox = document.createElement("ul");
@@ -58,17 +52,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 const style = document.createElement("li");
                 style.innerText = artMeta.data.style_title;
 
-                const classification = document.createElement("li");
-                classification.innerText = artMeta.data.classification_title;
+                // const classification = document.createElement("li");
+                // classification.innerText = artMeta.data.classification_title;
 
-                console.log(artist.innerText);
+                const artworkID = document.createElement("li");
+                let learnMore = `https://artic.edu/artworks/${artMeta.data.id}`
+                artworkID.innerHTML = '<a href="'+ learnMore +'"target="_blank">Learn more about this piece</a>';
 
-                metaBox.append(artist, style, classification);
+                //console.log(artworkID);
+
+                metaBox.append(artist,style,artworkID);
                 hiddenInfo.append(metaBox);
                 setTimeout(() => {
                   //console.log('Hello World!');
                   hiddenInfo.innerHTML = "";
-                }, 5000);
+                }, 10000);
               });
               overlay.append(titleHover);
               div.append(img, overlay);
@@ -77,15 +75,13 @@ document.addEventListener("DOMContentLoaded", () => {
               overlay.addEventListener("mouseenter", enlargeImg)
               function enlargeImg() {
                 img.style.transform = "scale(2.0)";
-                img.style.transition = "transform 0.25s ease";
+                img.style.transition = "transform 2s ease";
               }
               overlay.addEventListener("mouseleave", resetImg)
               function resetImg() {
                 img.style.transform = "scale(1)";
-                img.style.transition = "transform 0.25s ease";
+                img.style.transition = "transform 1s ease";
               }
-
-            
             });
         });
       });
